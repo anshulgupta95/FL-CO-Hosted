@@ -27,6 +27,11 @@ router.get('/test', (req, res) => {
     res.send("Hello from test!");
 });
 
+router.get('/test1', (req, res) => {
+    logger.info("Line 26 | Server Sent A Hello World!");
+    res.send("Hello from test!");
+});
+
 router.post('/carryover', async (req, res) => {
     logger.info("Line 31 | Start CarryOver!");
     getContent(req, res);
