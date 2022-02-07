@@ -11,7 +11,8 @@ const { create } = require('xmlbuilder2');
 const moment = require('moment');
 var logger = require('./utils/logger');
 
-const port = 3000;
+// const port = 3000;
+const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 3000;
 let sitemapFile = 'sitemap.xml';
 let isPage;
 app.use(express.json());
